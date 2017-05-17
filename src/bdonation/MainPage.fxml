@@ -12,7 +12,7 @@
 
 <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bdonation.MainPageController">
   <tabs>
-    <Tab text="Receptionist">
+    <Tab fx:id="TabReceptionist" text="Receptionist">
          <content>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ebc6d9;">
                <children>
@@ -55,20 +55,20 @@
                         <TableColumn minWidth="0.0" prefWidth="406.0" text="Address" />
                     </columns>
                   </TableView>
-                  <Button fx:id="rSave" layoutX="500.0" layoutY="168.0" mnemonicParsing="false" onAction="save" prefHeight="31.0" prefWidth="91.0" text="Save" />
+                  <Button fx:id="rSave" layoutX="500.0" layoutY="168.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="91.0" text="Save" />
                   <TextField fx:id="search" layoutX="445.0" layoutY="328.0" prefHeight="31.0" prefWidth="445.0" promptText="Search" />
-                  <Button fx:id="rSearchBut" layoutX="909.0" layoutY="328.0" mnemonicParsing="false" onAction="Search" text="Search" />
+                  <Button fx:id="rSearchBut" layoutX="909.0" layoutY="328.0" mnemonicParsing="false" onAction="#Search" text="Search" />
                   <ImageView fitHeight="115.0" fitWidth="96.0" layoutX="898.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../SIMYA%20Fotolar/Profil/savelife-logo-sm.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="rLogout" layoutX="905.0" layoutY="137.0" mnemonicParsing="false" onAction="loginout" text="Log out" />
+                  <Button fx:id="rLogout" layoutX="905.0" layoutY="137.0" mnemonicParsing="false" onAction="#loginout" text="Log out" />
                </children>
             </AnchorPane>
          </content>
     </Tab>
-    <Tab text="Nurse">
+    <Tab fx:id="TabNurse" text="Nurse">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ebc6d9;">
                <children>
@@ -96,7 +96,7 @@
                   <TextField fx:id="nDate" layoutX="144.0" layoutY="118.0" />
                   <TextField fx:id="nBtype" layoutX="144.0" layoutY="170.0" />
                   <TextField fx:id="nLab" layoutX="144.0" layoutY="218.0" />
-                  <Button fx:id="nSave" layoutX="238.0" layoutY="265.0" mnemonicParsing="false" onAction="save" prefHeight="31.0" prefWidth="88.0" text="Save" />
+                  <Button fx:id="nSave" layoutX="238.0" layoutY="265.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="88.0" text="Save" />
                   <TableView fx:id="tvNurseView" layoutX="27.0" layoutY="381.0" prefHeight="348.0" prefWidth="943.0">
                      <columns>
                         <TableColumn prefWidth="208.0" text="Donor ID" />
@@ -106,18 +106,18 @@
                      </columns>
                   </TableView>
                   <TextField fx:id="nSearch" layoutX="462.0" layoutY="296.0" prefHeight="31.0" prefWidth="389.0" />
-                  <Button fx:id="nSearchBut" layoutX="874.0" layoutY="296.0" mnemonicParsing="false" onAction="search" text="Search" />
+                  <Button fx:id="nSearchBut" layoutX="874.0" layoutY="296.0" mnemonicParsing="false" onAction="#Search" text="Search" />
                   <ImageView fitHeight="115.0" fitWidth="96.0" layoutX="896.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../SIMYA%20Fotolar/Profil/savelife-logo-sm.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="nLogout" layoutX="903.0" layoutY="135.0" mnemonicParsing="false" onAction="loginout" text="Log out" />
+                  <Button fx:id="nLogout" layoutX="903.0" layoutY="135.0" mnemonicParsing="false" onAction="#loginout" text="Log out" />
                </children>
             </AnchorPane>
          </content>
       </Tab>
-    <Tab text="Storage">
+    <Tab fx:id="TabStorage" text="Storage">
          <content>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="591.0" prefWidth="829.0" style="-fx-background-color: #ebc6d9;">
                <children>
@@ -146,15 +146,15 @@
                   <TextField fx:id="sBloodId" layoutX="138.0" layoutY="83.0" prefHeight="25.0" prefWidth="201.0" />
                   <TextField fx:id="sDate" layoutX="138.0" layoutY="126.0" prefHeight="25.0" prefWidth="201.0" />
                   <TextField fx:id="sAddress" layoutX="138.0" layoutY="178.0" prefHeight="25.0" prefWidth="201.0" />
-                  <Button fx:id="sSave" layoutX="238.0" layoutY="249.0" mnemonicParsing="false" onAction="save" prefHeight="31.0" prefWidth="78.0" text="Save" />
-                  <Button fx:id="sSearchbut" layoutX="846.0" layoutY="265.0" mnemonicParsing="false" onAction="search" text="Search" />
+                  <Button fx:id="sSave" layoutX="238.0" layoutY="249.0" mnemonicParsing="false" onAction="#save" prefHeight="31.0" prefWidth="78.0" text="Save" />
+                  <Button fx:id="sSearchbut" layoutX="846.0" layoutY="265.0" mnemonicParsing="false" onAction="#Search" text="Search" />
                   <TextField fx:id="sSearch" layoutX="438.0" layoutY="265.0" prefHeight="31.0" prefWidth="389.0" />
                   <ImageView fitHeight="115.0" fitWidth="96.0" layoutX="895.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../SIMYA%20Fotolar/Profil/savelife-logo-sm.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="sLogout" layoutX="902.0" layoutY="131.0" mnemonicParsing="false" onAction="loginout" text="Log out" />
+                  <Button fx:id="sLogout" layoutX="902.0" layoutY="131.0" mnemonicParsing="false" onAction="#loginout" text="Log out" />
                </children>
             </AnchorPane>
          </content>
